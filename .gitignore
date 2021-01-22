@@ -1,0 +1,4 @@
+node_modules
+lib
+docs/docs/api
+typedoc-sidebar.js

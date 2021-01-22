@@ -1,0 +1,15 @@
+{
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parser": "esprima",
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2020": true
+    },
+    "parserOptions": {
+        "sourceType": "script",
+        "ecmaVersion": 12
+    }
+}
