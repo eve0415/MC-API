@@ -9,6 +9,7 @@ export class Util {
      * @static
      * @param category - Category or section to resolve.
      * @return Category or section object
+     * @throws Will throw an error when it cannot be resolved
      */
     static resolveCategory(category?: SectionAndCategoryResolvable): {section?: ValueOf<typeof SectionTypes>, category?: ValueOf<typeof CategoryList>} {
         if (!category) return {};

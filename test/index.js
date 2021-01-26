@@ -1,6 +1,6 @@
-const { searchProject, getProject } = require("../lib");
+const { searchProject, getProject, getUUID } = require("../lib");
 
 (async () => {
-    const data = await getProject(223852);
-    console.log(data)
+    const data = await getUUID("eve0415");
+    console.log(await data.getSkin())
 })()

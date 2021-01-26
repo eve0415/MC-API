@@ -16,7 +16,7 @@ By using this library, it would make it easier to interact and code.
 
 ### Features (Plans)
 
-- [ ] Mojang - A official Mojang API, getting Minecraft Services status, player UUID or name, changing username and etc.
+- [x] Mojang - A official Mojang API, getting Minecraft Services status, player UUID or name, changing username and etc.
 - [x] CurseForge - Getting project (mods, modpacks, world, etc.), Minecraft and Forge versions and many other information.
 - [ ] PaperMC - Getting build version.
 
