@@ -1,2 +1,2 @@
-export * from './CurseForge';
-export * from './Mojang';
+export * as curseforge from './CurseForge';
+export * as mojang from './Mojang';

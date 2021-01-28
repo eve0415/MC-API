@@ -11,7 +11,7 @@ import {
     GameCategory,
     ValueOf,
 } from '.';
-import { getProject, getProjectFileInfo } from '../../api';
+import { curseforge } from '../../api';
 
 /**
  * Represents a project but smaller and simpler
@@ -221,7 +221,7 @@ export class SimpleFile {
     /** Fetches this File. */
     public async fetch(): Promise<SimpleFile> {
         if (!this.partial) return Object.freeze(this);
-        const project = await getProjectFileInfo(this.projectId, this.id, false) as File;
+        const project = await curseforge.getProjectFileInfo(this.projectId, this.id, false) as File;
         this.url = project.downloadUrl;
         this.size = project.fileLength;
         this.date = project.fileDate;
@@ -260,7 +260,7 @@ export class SimpleDependency {
      * @param simple - Wether or not to make the result simple or want it as is
      */
     public fetchProject(simple = true): Promise<Project | SimpleProject> {
-        return getProject(this.projectId, simple);
+        return curseforge.getProject(this.projectId, simple);
     }
 }
 

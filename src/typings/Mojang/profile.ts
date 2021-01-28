@@ -1,4 +1,4 @@
-import { getNameHistory, getSkin } from '../..';
+import { mojang } from '../..';
 
 /**
  * Represents a player data
@@ -27,14 +27,14 @@ export class Player implements UUIDresponse {
      * Fetch player name history
      */
     public getNameHistory(): Promise<string> {
-        return getNameHistory(this.id);
+        return mojang.getNameHistory(this.id);
     }
 
     /**
      * Fetch skin data
      */
     public async getSkin(): Promise<Skin> {
-        this.skin = await getSkin(this.id);
+        this.skin = await mojang.getSkin(this.id);
         return this.skin;
     }
 }

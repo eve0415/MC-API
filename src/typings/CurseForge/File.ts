@@ -1,5 +1,5 @@
 import { DependencyTypes, Project, ReleaseType, SimpleFile, SimpleProject, ValueOf } from '.';
-import { getProject, getProjectFileChangelog } from '../..';
+import { curseforge } from '../..';
 
 /**
  * Represents a file of a project.
@@ -113,7 +113,7 @@ export class File {
      * Fetch changelog of this file.
      */
     public getChangelog(): Promise<string> {
-        return getProjectFileChangelog(this.projectId, this.id);
+        return curseforge.getProjectFileChangelog(this.projectId, this.id);
     }
 }
 
@@ -167,7 +167,7 @@ export class Dependency {
      * @param simple - Wether or not to make the result simple or want it as is
      */
     public fetchProject(simple = true): Promise<Project | SimpleProject> {
-        return getProject(this.addonId, simple);
+        return curseforge.getProject(this.addonId, simple);
     }
 }
 
