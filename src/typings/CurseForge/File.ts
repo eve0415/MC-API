@@ -1,4 +1,4 @@
-import { DependencyTypes, Project, ReleaseType, SimpleFile, SimpleProject, ValueOf } from '.';
+import { DependencyTypes, CFProject, ReleaseType, SimpleFile, SimpleProject, ValueOf } from '.';
 import { curseforge } from '../..';
 
 /**
@@ -166,7 +166,7 @@ export class Dependency {
      * Fetch project data of the dependency from API.
      * @param simple - Wether or not to make the result simple or want it as is
      */
-    public fetchProject(simple = true): Promise<Project | SimpleProject> {
+    public fetchProject(simple = true): Promise<CFProject | SimpleProject> {
         return curseforge.getProject(this.addonId, simple);
     }
 }

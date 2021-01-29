@@ -1,5 +1,5 @@
 import {
-    Project,
+    CFProject,
     File,
     LatestFile,
     Author,
@@ -54,7 +54,7 @@ export class SimpleProject {
      * @constructor
      * @param project - Project data
      */
-    public constructor(project: Project) {
+    public constructor(project: CFProject) {
         this.id = project.id;
         this.name = project.name;
         this.summary = project.summary;
@@ -259,7 +259,7 @@ export class SimpleDependency {
      * Fetch project data of the dependency from API.
      * @param simple - Wether or not to make the result simple or want it as is
      */
-    public fetchProject(simple = true): Promise<Project | SimpleProject> {
+    public fetchProject(simple = true): Promise<SimpleProject | CFProject> {
         return curseforge.getProject(this.projectId, simple);
     }
 }

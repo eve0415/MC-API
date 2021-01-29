@@ -2,7 +2,7 @@ import axios from 'axios';
 import turndown from 'turndown';
 import {
     SearchOptions,
-    Project,
+    CFProject,
     Util,
     SortTypes,
     File,
@@ -23,7 +23,7 @@ const formatter = new turndown();
  * @param option - The options and filter to search for.
  * @param simple - Wether or not to make the result simple or want it as is
  */
-export async function searchProject(option?: Partial<SearchOptions>, simple = true): Promise<Project[] | SimpleProject[]> {
+export async function searchProject(option?: Partial<SearchOptions>, simple = true): Promise<CFProject[] | SimpleProject[]> {
     const url = `${curseURL}/addon/search`;
     const params = {
         gameId: option?.gameId ?? 432,
@@ -35,8 +35,8 @@ export async function searchProject(option?: Partial<SearchOptions>, simple = tr
         index: option?.index,
         gameVersion: option?.gameVersion ?? '',
     };
-    const res = await axios.get<Project[]>(url, { params });
-    const original = res.data.map(d => new Project(d));
+    const res = await axios.get<CFProject[]>(url, { params });
+    const original = res.data.map(d => new CFProject(d));
     return simple ? original.map(o => o.toSimple()) : original;
 }
 
@@ -45,10 +45,10 @@ export async function searchProject(option?: Partial<SearchOptions>, simple = tr
  * @param id - The project ID
  * @param simple - Wether or not to make the result simple or want it as is
  */
-export async function getProject(id: number, simple = true): Promise<Project | SimpleProject> {
+export async function getProject(id: number, simple = true): Promise<CFProject | SimpleProject> {
     const url = `${curseURL}/addon/${id}`;
-    const res = await axios.get<Project>(url);
-    const original = new Project(res.data);
+    const res = await axios.get<CFProject>(url);
+    const original = new CFProject(res.data);
     return simple ? original.toSimple() : original;
 }
 
@@ -58,11 +58,11 @@ export async function getProject(id: number, simple = true): Promise<Project | S
  * @param simple - Wether or not to make the result simple or want it as is
  * @returns Return an array of {@link Project}
  */
-export async function getMultipleProjects(id: number[], simple = true): Promise<Project[] | SimpleProject[]> {
+export async function getMultipleProjects(id: number[], simple = true): Promise<CFProject[] | SimpleProject[]> {
     const url = `${curseURL}/addon`;
     const params = { 'Content-Type': 'application/json' };
-    const res = await axios.post<Project[]>(url, id, { params });
-    const original = res.data.map(d => new Project(d));
+    const res = await axios.post<CFProject[]>(url, id, { params });
+    const original = res.data.map(d => new CFProject(d));
     return simple ? original.map(o => o.toSimple()) : original;
 }
 
@@ -143,8 +143,8 @@ export async function getFeatured(option?: Partial<FeatureOptions>): Promise<[Fe
         updatedCount: option?.updated ?? 8,
     };
     const res = await axios.post<ProjectTypeObject>(url, data, { params });
-    const featured = res.data.Featured.map((d: Project) => new FeaturedProject(d));
-    const popular = res.data.Popular.map((d: Project) => new PopularProject(d));
-    const update = res.data.RecentlyUpdated.map((d: Project) => new UpdatedProject(d));
+    const featured = res.data.Featured.map((d: CFProject) => new FeaturedProject(d));
+    const popular = res.data.Popular.map((d: CFProject) => new PopularProject(d));
+    const update = res.data.RecentlyUpdated.map((d: CFProject) => new UpdatedProject(d));
     return [featured, popular, update];
 }

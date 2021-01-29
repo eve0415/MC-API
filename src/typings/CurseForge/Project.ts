@@ -3,7 +3,7 @@ import { Attachment, Author, Category, File, GameCategory, LatestFile, SimplePro
 /**
  * Represents a project received from CurseForge
  */
-export class Project {
+export class CFProject {
     /** The ID of the project */
     readonly id!: number;
     /** The display name of the project */
@@ -65,7 +65,7 @@ export class Project {
      * @constructor
      * @param data - Raw project data
      */
-    public constructor(data: Project) {
+    public constructor(data: CFProject) {
         Object.assign(this, data);
         this.authors = data.authors.map(d => new Author(d));
         this.attachments = data.attachments.map(d => new Attachment(d));
@@ -90,19 +90,19 @@ export class Project {
  * Represents a featured project
  * @extends Project
  */
-export class FeaturedProject extends Project { }
+export class FeaturedProject extends CFProject { }
 
 /**
  * Represents a popular project
  * @extends Project
  */
-export class PopularProject extends Project { }
+export class PopularProject extends CFProject { }
 
 /**
  * Represents a recently updated project
  * @extends Project
  */
-export class UpdatedProject extends Project { }
+export class UpdatedProject extends CFProject { }
 
 /**
  * @ignore
