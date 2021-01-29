@@ -1,6 +1,7 @@
-const { searchProject, getProject, getUUID } = require("../lib");
+const { paper } = require("../lib");
+const fs = require("fs");
 
 (async () => {
-    const data = await getUUID("eve0415");
-    console.log(await data.getSkin())
+    const data = await paper.getVersionGroupBuilds("paper", "1.12");
+    console.log(data.builds[0])
 })()

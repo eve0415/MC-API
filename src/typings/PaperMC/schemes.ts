@@ -17,7 +17,7 @@ export interface ProjectList {
 /** A project data base of Paper */
 export interface PaperProjectBase {
     /** The ID of the project */
-    readonly project_id: string
+    readonly project_id: ProjectType
     /** The name of the project */
     readonly project_name: string
 }
@@ -30,13 +30,27 @@ export interface PaperProject extends PaperProjectBase {
     readonly versions: string[]
 }
 
-export interface Changes {
+/** Represents a version data */
+export interface PaperVersion extends PaperProjectBase {
+    /** The version of the project */
+    readonly version: string
+    /** The available builds of the version */
+    readonly builds: number[]
+}
+
+/** Represents a change data */
+export interface Change {
+    /** A commit hash */
     readonly commit: string
+    /** The summary of the commit */
     readonly summary: string
+    /** The message of the commit */
     readonly message: string
 }
 
 export interface PaperFile {
+    /** The name of the file */
     readonly name: string
+    /** The sha256 of the file */
     readonly sha256: string
 }
