@@ -3772,12 +3772,10 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
-docusaurus-plugin-typedoc@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-typedoc/-/docusaurus-plugin-typedoc-0.7.0.tgz#9061f062374a5605f8b390f1fdda6d74d12ae806"
-  integrity sha512-6aV455MEIvgnN/Go3iy1qb54LXcE3xjnA1tDNejtzlKMHRac9WwIZ1MKSpsGrM3b5XM/4Ylkxocxc3DTSBmejA==
-  dependencies:
-    fs-extra "^9.0.1"
+docusaurus-plugin-typedoc@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-typedoc/-/docusaurus-plugin-typedoc-0.8.1.tgz#84da8bb352b194a0079e218fdf9b263749b30d45"
+  integrity sha512-RBRmk7RjgHckukCPb25paXjb+UP3eOJA7gMnUnh/dJ6Tmbh7WjUkoCtYIpe21MgCVK7iZrgd2D6lX7L6ikbJNw==
 
 dom-converter@^0.2:
   version "0.2.0"
@@ -9648,22 +9646,22 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typedoc-default-themes@^0.12.4:
-  version "0.12.4"
-  resolved "https://registry.yarnpkg.com/typedoc-default-themes/-/typedoc-default-themes-0.12.4.tgz#5cbb79c1d6421f1274e86b1b542934eb557abd4f"
-  integrity sha512-EZiXBUpogsYWe0dLgy47J8yRZCd+HAn9woGzO28XJxxSCSwZRYGKeQiw1KjyIcm3cBtLWUXiPD5+Bgx24GgZjg==
+typedoc-default-themes@^0.12.5:
+  version "0.12.5"
+  resolved "https://registry.yarnpkg.com/typedoc-default-themes/-/typedoc-default-themes-0.12.5.tgz#063725a3eb407593ab07e4f110e5cf33b3892616"
+  integrity sha512-JQ2O9laZ/EhfWUWYp/8EyuShYhtXLhIa6DU8eZNUfaurMhEgKdffbadKNv6HMmTfOxAcgiePg06OCxNX8EyP3g==
 
-typedoc-plugin-markdown@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.4.2.tgz#3352fdbdb1fcf34eaadef03351f6ffb7317a090e"
-  integrity sha512-SbN9iSD7T0XKSNDxYlH+luMgOwKOM1BcJvwLzC/C/k+dHCyZXUJ5xln3fZhs/5g843AvkW8dfI5wq8ky7LoAeA==
+typedoc-plugin-markdown@^3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.4.5.tgz#d32aad06a9b93946a31ea68438cd02620c12e857"
+  integrity sha512-m24mSCGcEk6tQDCHIG4TM3AS2a7e9NtC/YdO0mefyF+z1/bKYnZ/oQswLZmm2zBngiLIoKX6eNdufdBpQNPtrA==
   dependencies:
     handlebars "^4.7.6"
 
-typedoc@^0.20.16:
-  version "0.20.16"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.20.16.tgz#c845d32883af905439607ba03c9667b81cdbeb22"
-  integrity sha512-xqIL8lT6ZE3QpP0GN30ckeTR05NSEkrP2pXQlNhC0OFkbvnjqJtDUcWSmCO15BuYyu4qsEbZT+tKYFEAt9Jxew==
+typedoc@^0.20.19:
+  version "0.20.19"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.20.19.tgz#4871f659bc03a545c572066329273f1b30fb1cba"
+  integrity sha512-9FjQ1xQGtxpXm8R5QKvU8wFBaaYe8RW3NzrhGWB8RigbOALwG+4ywJ/EyArPGWXvmXYB7I8h2YHzeyFvZ2s0ow==
   dependencies:
     colors "^1.4.0"
     fs-extra "^9.0.1"
@@ -9675,7 +9673,7 @@ typedoc@^0.20.16:
     progress "^2.0.3"
     shelljs "^0.8.4"
     shiki "^0.2.7"
-    typedoc-default-themes "^0.12.4"
+    typedoc-default-themes "^0.12.5"
 
 ua-parser-js@^0.7.18:
   version "0.7.23"
