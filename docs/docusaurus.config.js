@@ -14,7 +14,12 @@ module.exports = {
       {
         allReflectionsHaveOwnDocument: true,
         docsRoot: 'docs',
-        entryPoints: ['../src/index.ts'],
+        entryPoints: [
+          '../src/typings/index.ts',
+          "../src/api/CurseForge/index.ts",
+          "../src/api/Mojang/index.ts",
+          "../src/api/PaperMC/index.ts"
+        ],
         excludeExternals: true,
         excludePrivate: true,
         name: "Minecraft-API",
