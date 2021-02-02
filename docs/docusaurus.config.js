@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'A library for interacting with API that is related to Minecraft.',
   url: 'https://eve0415.github.io',
   baseUrl: '/minecraft-api/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'eve0415',
