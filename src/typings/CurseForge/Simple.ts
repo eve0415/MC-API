@@ -86,6 +86,13 @@ export class SimpleProject {
 
         return cached;
     }
+
+    /**
+     * Fetch project's description.
+     */
+    public getDescription(): Promise<string> {
+        return curseforge.getProjectDescription(this.id);
+    }
 }
 
 /**
@@ -231,6 +238,13 @@ export class SimpleFile {
         this.serverPackFileId = project.serverPackFileId;
         this.dependencies = project.dependencies.map(d => new SimpleDependency(d));
         return Object.freeze(this);
+    }
+
+    /**
+     * Fetch changelog of this file.
+     */
+    public getChangelog(): Promise<string> {
+        return curseforge.getProjectFileChangelog(this.projectId, this.id);
     }
 }
 

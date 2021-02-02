@@ -1,7 +1,6 @@
 const { paper } = require("../lib");
-const fs = require("fs");
 
 (async () => {
-    const data = await paper.getVersionGroupBuilds("paper", "1.12");
-    console.log(data.builds[0])
+    const data = await paper.getVersion("paper", "1.16.5");
+    console.log(data.builds.pop());
 })()

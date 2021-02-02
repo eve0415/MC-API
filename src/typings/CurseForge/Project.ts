@@ -1,4 +1,5 @@
 import { Attachment, Author, Category, File, GameCategory, LatestFile, SimpleProject } from '.';
+import { curseforge } from '../../api';
 
 /**
  * Represents a project received from CurseForge
@@ -83,6 +84,13 @@ export class CFProject {
      */
     public toSimple(): SimpleProject {
         return new SimpleProject(this);
+    }
+
+    /**
+     * Fetch project's description.
+     */
+    public getDescription(): Promise<string> {
+        return curseforge.getProjectDescription(this.id);
     }
 }
 

@@ -1,6 +1,6 @@
-import { searchProject } from "../lib"
+import { curseforge } from "../lib"
 
 (async () => {
-    const data = await searchProject({ category: 127 });
+    const data = await curseforge.searchProject({ category: 127 });
     console.log(data)
 })
