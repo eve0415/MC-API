@@ -70,4 +70,6 @@ jobs:
           yarn install --frozen-lockfile
 
       - name: Build
-        run: yarn build
+        run: |
+          cd docs
+          yarn build
