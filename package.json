@@ -18,8 +18,7 @@
   "scripts": {
     "lint": "npx eslint --ext ts --fix src/**/*",
     "build": "tsc",
-    "watch": "tsc -w",
-    "docs": "npx typedoc"
+    "watch": "tsc -w"
   },
   "engines": {
     "node": ">=14.0.0"
