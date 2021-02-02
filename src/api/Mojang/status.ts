@@ -7,7 +7,7 @@ import { mojangStatus } from '../url';
  * @returns Returns each service with status color
  * - Green: No problem
  * - Yellow: Some issues
- * - Red: Probably not working propertly
+ * - Red: Probably not working properly
  */
 export async function getMojangStatus(): Promise<MojangStatus> {
     const res = await axios.get<MojangStatus[]>(mojangStatus);
