@@ -33,7 +33,7 @@ export async function getProject(project: ProjectType): Promise<PaperProject> {
 export async function getVersionGroup(project: ProjectType, version: string): Promise<VersionGroupProject> {
     const url = `${papermcAPI}/projects/${project}/version_group/${version}`;
     const res = await axios.get<VersionGroupProject>(url);
-    return res.data;
+    return new VersionGroupProject(res.data);
 }
 
 /**
