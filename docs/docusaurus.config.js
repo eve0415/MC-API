@@ -86,6 +86,10 @@ module.exports = {
               label: 'CurseForge',
               to: 'https://www.curseforge.com/',
             },
+            {
+              label: 'PaperMC',
+              to: 'https://papermc.io/',
+            },
           ],
         },
         {

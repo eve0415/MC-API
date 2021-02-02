@@ -11,14 +11,16 @@ Minecraft-API is a All in One library that can interact to other services that a
 
 ### What exactly is it?
 
-As there are several API related to Minecraft such as [Mojang API](https://www.minecraft.net/), [CurseForge](https://www.curseforge.com/), [PaperMC](https://papermc.io/) and many others, this library is aimed to be All in One library to interact with those API.  
+As there are several API related to Minecraft such as [Mojang API](https://www.minecraft.net/), [CurseForge](https://www.curseforge.com/), [PaperMC](https://papermc.io/) and probably many others, this library aimed to be All in One library to interact with those API.  
 By using this library, it would make it easier to interact and code.
 
-### Features (Plans)
+### Features
 
-- [x] Mojang - A official Mojang API, getting Minecraft Services status, player UUID or name, changing username and etc.
-- [x] CurseForge - Getting project (mods, modpacks, world, etc.), Minecraft and Forge versions and many other information.
-- [ ] PaperMC - Getting build version.
+- Mojang - A official Mojang API, getting Minecraft Service status, player UUID or name and skins.
+- CurseForge - Getting project (mods, modpacks, world, etc.), Minecraft and Forge versions and many other information.
+- PaperMC - Getting build version and download the build.
+
+If you have a request to support other API related to Minecraft, please open a issue on Github.
 
 ### License
 

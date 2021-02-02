@@ -31,7 +31,7 @@ const features = [
     imageUrl: 'img/typescript.png',
     description: (
       <>
-        As this project is fully written in Typescript,
+        This project is fully written in Typescript,
         meaning all the types and defenitions are documented on the source.
       </>
     ),
