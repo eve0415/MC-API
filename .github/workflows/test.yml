@@ -24,7 +24,7 @@ jobs:
       - name: Run ESLint
         run: yarn lint
 
-  build:
+  build-source:
     name: Build source
     runs-on: ubuntu-latest
     steps:
@@ -47,6 +47,7 @@ jobs:
       - name: Build
         run: yarn build
         
+  build-document:
     name: Build documents
     runs-on: ubuntu-latest
     steps:
