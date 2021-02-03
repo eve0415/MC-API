@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eve0415.github.io/blog</id>
-    <title>Minecraft-API Blog</title>
+    <title>MC-API Blog</title>
     <updated>2015-10-25T23:29:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eve0415.github.io/blog"/>
-    <subtitle>Minecraft-API Blog</subtitle>
+    <subtitle>MC-API Blog</subtitle>
     <icon>https://eve0415.github.io/img/favicon.ico</icon>
 </feed>
