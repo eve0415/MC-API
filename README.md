@@ -1,4 +1,4 @@
-# Minecraft-API
+# Minecraft-API [![License](https://img.shields.io/github/license/eve0415/Minecraft-API)](https://opensource.org/licenses/Apache-2.0) ![Test](https://github.com/eve0415/Minecraft-API/workflows/Test/badge.svg)
 
 This is a library for interacting with API that is related to Minecraft.
 
@@ -12,6 +12,15 @@ As there are several API related to Minecraft such as [Mojang API](https://www.m
 
 ----------------------
 
-- [Mojang](https://wiki.vg/Mojang_API)
-- CurseForge
-- [PaperMC](https://paper.readthedocs.io/en/latest/site/api.html)
+- Mojang - A official Mojang API, getting Minecraft Service status, player UUID or name and skins.
+- CurseForge - Getting project (mods, modpacks, world, etc.), Minecraft and Forge versions and many other information.
+- PaperMC - Getting build version and download the build.
+
+## Links
+
+----------------------
+
+- [Documentation and Guide](https://eve0415.github.io/Minecraft-API/)
+- [Minecraft Official](https://www.minecraft.net/)
+- [CurseForge](https://www.curseforge.com/)
+- [PaperMC](https://papermc.io/)
