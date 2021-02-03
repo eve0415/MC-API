@@ -1,0 +1,44 @@
+name: Publish
+on:
+  push:
+    tags: '*'
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node v15
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: |
+          yarn install --frozen-lockfile
+          cd docs
+          yarn install --frozen-lockfile
+
+      - name: Build library
+        run: yarn build
+
+      - name: Publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build and deploy documentation
+        if: always()
+        env:
+          GIT_USER: ${{ github.actor }}:${{ github.token }}
+        run: |
+          git config --global user.name "eve0415"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          cd docs
+          yarn deploy
