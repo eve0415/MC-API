@@ -6,9 +6,9 @@ sidebar_label: "Mod"
 
 CurseForge handles mods, modpacks, resources and many other projects.
 
-If you want to filter out the category or and sections, please refer to [Sections](api/variables/typings.sectiontypes) and [Category](api/variables/typings.categorylist).
+If you want to filter out the category or and sections, please refer to [Sections](../../api/variables/typings.sectiontypes) and [Category](../../api/variables/typings.categorylist).
 
-:::tip Specifying [category option](api/interfaces/typings.searchoptions#category)
+:::tip Specifying [category option](../../api/interfaces/typings.searchoptions#category)
 You can use ID or name for this option.
 
 However, there are several conflicting section names such as `MISCELLANEOUS`, `MAGIC` which are both used in mods and modpacks.
@@ -22,7 +22,7 @@ If you don't pass a category option, then it will return modpack list as default
 
 ### Fetching a mod list
 
-You can use a [option](api/interfaces/typings.searchoptions.md) to specify and search for what you want.
+You can use a [option](../../api/interfaces/typings.searchoptions.md) to specify and search for what you want.
 
 ```js
 const { curseforge } = require('minecraft-api');
@@ -37,7 +37,7 @@ curseforge.searchProject( { category: 6 } )
 
 ### Fetching a featured mod list
 
-You can use a [option](api/interfaces/typings.featureoptions.md) to specify and fetch how many packages you want for each selections.
+You can use a [option](../../api/interfaces/typings.featureoptions.md) to specify and fetch how many packages you want for each selections.
 
 ```js
 const { curseforge } = require('minecraft-api');

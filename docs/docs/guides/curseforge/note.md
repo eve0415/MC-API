@@ -10,10 +10,10 @@ CurseForge API returns a rather dirty object; there are always null property, du
 
 This library would make these responses cleaner, smaller and understandable classes so that everyone can use.
 
-For example, when you try to search a package, the api would returns [this](api/classes/typings.cfproject), which most of the properties are not useful and making it harder to understand.
-Instead of this full response, this library would make it more simpler and smaller like [this](api/classes/typings.simpleproject).
+For example, when you try to search a package, the api would returns [this](../../api/classes/typings.cfproject), which most of the properties are not useful and making it harder to understand.
+Instead of this full response, this library would make it more simpler and smaller like [this](../../api/classes/typings.simpleproject).
 
-To search for the project, you can use this [method](api/functions/api_curseforge.getproject)
+To search for the project, you can use this [method](../../api/functions/api_curseforge.getproject)
 
 ```js
 curseforge.searchProject()
@@ -22,8 +22,8 @@ curseforge.searchProject()
     });
 ```
 
-The default return value is [SimpleProject](api/classes/typings.simpleproject) as I said earlier.
-However if you prefer a full response instead of simple one, you can always do by giving `false` on second parameter. (The first one is a [search options](api/interfaces/typings.searchoptions.md))
+The default return value is [SimpleProject](../../api/classes/typings.simpleproject) as I said earlier.
+However if you prefer a full response instead of simple one, you can always do by giving `false` on second parameter. (The first one is a [search options](../../api/interfaces/typings.searchoptions.md))
 
 ```js
 curseforge.searchProject({}, false)
