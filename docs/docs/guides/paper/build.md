@@ -5,7 +5,7 @@ sidebar_label: "Builds"
 ---
 
 ```js
-const { paper } = require('mc-api');
+const { paper } = require('aio-mc-api');
 
 // Let's get a version info
 const data = await paper.getVersion('paper', '1.16.5');

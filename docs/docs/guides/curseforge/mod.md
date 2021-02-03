@@ -25,7 +25,7 @@ If you don't pass a category option, then it will return modpack list as default
 You can use a [option](../../api/interfaces/typings.searchoptions.md) to specify and search for what you want.
 
 ```js
-const { curseforge } = require('mc-api');
+const { curseforge } = require('aio-mc-api');
 
 // Fetching a mod list
 // Category 6 means mods in overall
@@ -40,7 +40,7 @@ curseforge.searchProject( { category: 6 } )
 You can use a [option](../../api/interfaces/typings.featureoptions.md) to specify and fetch how many packages you want for each selections.
 
 ```js
-const { curseforge } = require('mc-api');
+const { curseforge } = require('aio-mc-api');
 
 // Fetching a featured/popular/latest mod list
 // Instead of category ID 6, you can use a name
@@ -62,7 +62,7 @@ curseforge.getFeatured( { category: 'MOD' } )
 You need a project ID to use this method.
 
 ```js
-const { curseforge } = require('mc-api');
+const { curseforge } = require('aio-mc-api');
 
 // Fetching a mod
 curseforge.getProject( 123456 )
