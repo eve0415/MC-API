@@ -15,6 +15,11 @@
   "bugs": {
     "url": "https://github.com/eve0415/Minecraft-API/issues"
   },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "lint": "npx eslint --ext ts --fix src/**/*",
     "build": "tsc",
