@@ -1,5 +1,8 @@
 name: Test
-on: push
+on: 
+  push:
+    branches: '*'
+    tags-ignore: '*'
 jobs:
   lint:
     name: ESLint
@@ -7,8 +10,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
 
       - name: Install Node v15
         uses: actions/setup-node@v2
@@ -24,37 +25,12 @@ jobs:
       - name: Run ESLint
         run: yarn lint
 
-  build-source:
-    name: Build source
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-
-      - name: Install Node v15
-        uses: actions/setup-node@v2
-        with:
-          node-version: 15
-
-      - name: Install yarn
-        run: npm install -g yarn
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build
-        run: yarn build
-        
-  build-document:
-    name: Build documents
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
 
       - name: Install Node v15
         uses: actions/setup-node@v2
@@ -66,10 +42,14 @@ jobs:
 
       - name: Install dependencies
         run: |
+          yarn install --frozen-lockfile
           cd docs
           yarn install --frozen-lockfile
 
-      - name: Build
+      - name: Build library
+        run: yarn build
+
+      - name: Build documents
         run: |
           cd docs
           yarn build
