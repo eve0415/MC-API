@@ -7,7 +7,7 @@ sidebar_label: "Installation"
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Minecraft-API is a npm packages that can be installed over npm.
+MC-API is a npm packages that can be installed over npm.
 
 ## Requirements
 
@@ -27,7 +27,7 @@ Minecraft-API is a npm packages that can be installed over npm.
   value="npm">
 
 ```bash
-npm install minecraft-api
+npm install mc-api
 ```
 
 </TabItem>
@@ -35,7 +35,7 @@ npm install minecraft-api
   value="yarn">
 
 ```bash
-yarn add minecraft-api
+yarn add mc-api
 ```
 
 </TabItem>

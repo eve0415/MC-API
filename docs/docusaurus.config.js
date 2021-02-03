@@ -1,13 +1,13 @@
 module.exports = {
-  title: 'Minecraft-API',
+  title: 'MC-API',
   tagline: 'A library for interacting with API that is related to Minecraft.',
   url: 'https://eve0415.github.io',
-  baseUrl: '/Minecraft-API/',
+  baseUrl: '/MC-API/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'eve0415',
-  projectName: 'Minecraft-API',
+  projectName: 'MC-API',
   plugins: [
     [
       'docusaurus-plugin-typedoc',
@@ -22,7 +22,7 @@ module.exports = {
         ],
         excludeExternals: true,
         excludePrivate: true,
-        name: "Minecraft-API",
+        name: "MC-API",
         out: 'api',
         readme: "none",
         tsconfig: '../tsconfig.json',
@@ -31,10 +31,10 @@ module.exports = {
   ],
   themeConfig: {
     navbar: {
-      title: 'Minecraft-API',
+      title: 'MC-API',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/minecraft-api.png',
+        src: 'img/mc-api.png',
       },
       items: [
         {
@@ -49,7 +49,7 @@ module.exports = {
           label: 'API',
         },
         {
-          href: 'https://github.com/eve0415/Minecraft-API',
+          href: 'https://github.com/eve0415/MC-API',
           label: 'GitHub',
           position: 'right',
         },
@@ -101,7 +101,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/eve0415/Minecraft-API',
+              href: 'https://github.com/eve0415/MC-API',
             },
           ],
         },
@@ -118,7 +118,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/eve0415/Minecraft-API/edit/master/docs/',
+          editUrl: 'https://github.com/eve0415/MC-API/edit/master/docs/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

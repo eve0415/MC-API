@@ -59,7 +59,7 @@ function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="A library for interacting with API that is related to Minecraft.">
+      description="A library for interacting with API that are related to Minecraft.">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>

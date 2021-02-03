@@ -5,7 +5,7 @@ sidebar_label: "Files"
 ---
 
 ```js
-const { curseforge } = require('minecraft-api');
+const { curseforge } = require('mc-api');
 
 // Let's search for JEI, we all use
 // Category 6 means mods in overall

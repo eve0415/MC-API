@@ -5,9 +5,9 @@ sidebar_label: "Introduction"
 hide_title: true
 ---
 
-## Welocome to the Minecraft-API
+## Welocome to the MC-API
 
-Minecraft-API is a All in One library that can interact to other services that are related to Minecraft.
+MC-API is a All in One library that can interact to other services that are related to Minecraft.
 
 ### What exactly is it?
 

@@ -5,7 +5,7 @@ sidebar_label: "Player"
 ---
 
 ```js
-const { mojang } = require('minecraft-api');
+const { mojang } = require('mc-api');
 
 // Fetch player's data
 const player = await mojang.getUUID('eve0415');

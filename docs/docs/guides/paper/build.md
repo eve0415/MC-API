@@ -5,7 +5,7 @@ sidebar_label: "Builds"
 ---
 
 ```js
-const { paper } = require('minecraft-api');
+const { paper } = require('mc-api');
 
 // Let's get a version info
 const data = await paper.getVersion('paper', '1.16.5');

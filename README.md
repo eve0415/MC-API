@@ -1,4 +1,4 @@
-# Minecraft-API [![License](https://img.shields.io/github/license/eve0415/Minecraft-API)](https://opensource.org/licenses/Apache-2.0) ![Test](https://github.com/eve0415/Minecraft-API/workflows/Test/badge.svg)
+# MC-API [![License](https://img.shields.io/github/license/eve0415/MC-API)](https://opensource.org/licenses/Apache-2.0) ![Test](https://github.com/eve0415/MC-API/workflows/Test/badge.svg)
 
 This is a library for interacting with API that is related to Minecraft.
 
@@ -20,7 +20,7 @@ As there are several API related to Minecraft such as [Mojang API](https://www.m
 
 ----------------------
 
-- [Documentation and Guide](https://eve0415.github.io/Minecraft-API/)
+- [Documentation and Guide](https://eve0415.github.io/MC-API/)
 - [Minecraft Official](https://www.minecraft.net/)
 - [CurseForge](https://www.curseforge.com/)
 - [PaperMC](https://papermc.io/)

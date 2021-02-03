@@ -7,7 +7,7 @@ sidebar_label: "Using API"
 Before using this library, you need to extract the required classes.
 
 ```js
-const { curseforge, mojang, paper } = require('minecraft-api');
+const { curseforge, mojang, paper } = require('mc-api');
 ```
 
 :::note

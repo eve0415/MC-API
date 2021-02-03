@@ -1,5 +1,5 @@
 {
-  "name": "minecraft-api",
+  "name": "mc-api",
   "version": "1.0.0",
   "description": "A library for interacting with API that are related to Minecraft",
   "keywords": [
@@ -11,11 +11,11 @@
     "node"
   ],
   "author": "eve0415 <40632436+eve0415@users.noreply.github.com>",
-  "homepage": "https://github.com/eve0415/Minecraft-API#readme",
+  "homepage": "https://github.com/eve0415/MC-API#readme",
   "license": "Apache-2.0",
-  "repository": "https://github.com/eve0415/Minecraft-API.git",
+  "repository": "https://github.com/eve0415/MC-API.git",
   "bugs": {
-    "url": "https://github.com/eve0415/Minecraft-API/issues"
+    "url": "https://github.com/eve0415/MC-API/issues"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

@@ -1,6 +1,6 @@
 module.exports = {
   docs: {
-    "Minecraft-API": ["about/intro", "about/install", "about/contribute"],
+    "MC-API": ["about/intro", "about/install", "about/contribute"],
     Guides: ["guides/first",
       {
         type: "category",
