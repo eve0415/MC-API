@@ -1,4 +1,4 @@
-# MC-API [![License](https://img.shields.io/github/license/eve0415/MC-API)](https://opensource.org/licenses/Apache-2.0) ![Test](https://github.com/eve0415/MC-API/workflows/Test/badge.svg) ![npm](https://img.shields.io/npm/v/aio-mc-api)
+# MC-API [![License](https://img.shields.io/github/license/eve0415/MC-API)](https://opensource.org/licenses/Apache-2.0) [![Test](https://github.com/eve0415/MC-API/workflows/Test/badge.svg)](https://github.com/eve0415/MC-API/actions?query=branch%3Amaster+workflow%3ATest+) [![npm](https://img.shields.io/npm/v/aio-mc-api)](https://www.npmjs.com/package/aio-mc-api)
 
 This is a library for interacting with API that is related to Minecraft.
 
