@@ -1,6 +1,7 @@
-const { paper } = require("../lib");
+const { curseforge } = require("../lib");
 
 (async () => {
-    const data = await paper.getVersion("paper", "1.16.5");
-    console.log(data.builds.pop());
+    const data = await curseforge.getProject("238222");
+    console.log(data.files[1]);
+    console.log(await data.files[1].fetch())
 })()

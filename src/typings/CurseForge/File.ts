@@ -31,8 +31,8 @@ export class File {
     readonly isAvailable!: boolean;
     /** An array of modules / file content */
     readonly modules!: Module[];
-    /** The fingerprint of the project */
-    readonly projectFingerprint!: number;
+    /** The fingerprint of the package */
+    readonly packageFingerprint!: number;
     /** The array of aimed game version of the file */
     readonly gameVersion!: string[];
     /** An array of sortable game version of the file */
@@ -94,6 +94,7 @@ export class File {
      * @param data - Raw file data
      */
     public constructor(data: File) {
+        console.log(data);
         Object.assign(this, data);
         this.dependencies = data.dependencies.map(d => new Dependency(d));
         this.modules = data.modules.map(d => new Module(d));
