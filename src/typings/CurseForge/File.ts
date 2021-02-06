@@ -94,7 +94,6 @@ export class File {
      * @param data - Raw file data
      */
     public constructor(data: File) {
-        console.log(data);
         Object.assign(this, data);
         this.dependencies = data.dependencies.map(d => new Dependency(d));
         this.modules = data.modules.map(d => new Module(d));
@@ -108,6 +107,77 @@ export class File {
      */
     public toSimple(): SimpleFile {
         return new SimpleFile(this.projectId, this, null);
+    }
+
+    /**
+     * Fetch changelog of this file.
+     */
+    public getChangelog(): Promise<string> {
+        return curseforge.getProjectFileChangelog(this.projectId, this.id);
+    }
+}
+
+/**
+ * Represents a file which is the response using {@link getProjectFileInfo}
+ */
+export class IFile {
+    /** The ID of the project */
+    private readonly projectId: number;
+    /** The ID of the file */
+    readonly id!: number;
+    /** The display name of the file */
+    readonly displayName!: string;
+    /** The file name of the file */
+    readonly fileName!: string;
+    /** The time the file got updated. */
+    readonly fileDate: Date;
+    /** The size of the file. */
+    readonly fileLength!: number;
+    /** The release type of the file */
+    readonly releaseType!: ValueOf<typeof ReleaseType>;
+    /** The status of the file. */
+    readonly fileStatus!: number;
+    /** A link to download */
+    readonly downloadUrl!: string;
+    /** Whether or not the file is alternate */
+    readonly isAlternate!: boolean;
+    /** The ID of the alternate file */
+    readonly alternateFileId!: number;
+    /** An array of dependencies */
+    readonly dependencies!: Dependency[];
+    /** Whether or not the file is available */
+    readonly isAvailable!: boolean;
+    /** An array of modules / file content */
+    readonly modules!: Module[];
+    /** The fingerprint of the package */
+    readonly packageFingerprint!: number;
+    /** The array of aimed game version of the file */
+    readonly gameVersion!: string[];
+    /**
+     * The meta data of the file
+     * @remarks Always null
+     */
+    readonly installMetadata!: string;
+    /** The ID of the server pack */
+    readonly serverPackFileId!: number | null;
+    /** Whether or not the file has install script */
+    readonly hasInstallScript!: boolean;
+    readonly gameVersionDateReleased: Date;
+    /** Always null */
+    readonly gameVersionFlavor!: string;
+
+    /**
+     * @constructor
+     * @param id - The ID of the project for the file
+     * @param data - Raw file data
+     */
+    public constructor(id: number, data: File) {
+        this.projectId = id;
+        Object.assign(this, data);
+        this.dependencies = data.dependencies.map(d => new Dependency(d));
+        this.modules = data.modules.map(d => new Module(d));
+        this.fileDate = new Date(data.fileDate);
+        this.gameVersionDateReleased = new Date(data.gameVersionDateReleased);
     }
 
     /**

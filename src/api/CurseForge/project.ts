@@ -13,7 +13,7 @@ import {
     UpdatedProject,
     SimpleProject,
 } from '../..';
-import { SimpleFile } from '../../typings';
+import { IFile, SimpleFile } from '../../typings';
 import { curseURL } from '../url';
 
 const formatter = new turndown();
@@ -81,13 +81,11 @@ export async function getProjectDescription(id: number): Promise<string> {
  * Fetch project file's data.
  * @param projectId - The project ID
  * @param fileId - The file ID associated with the project ID
- * @param simple - Wether or not to make the result simple or want it as is
  */
-export async function getProjectFileInfo(projectId: number, fileId: number, simple = true): Promise<File | SimpleFile> {
+export async function getProjectFileInfo(projectId: number, fileId: number): Promise<IFile> {
     const url = `${curseURL}/addon/${projectId}/file/${fileId}`;
     const res = await axios.get<File>(url);
-    const original = new File(res.data);
-    return simple ? original.toSimple() : original;
+    return new IFile(projectId, res.data);
 }
 
 /**

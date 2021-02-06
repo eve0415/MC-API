@@ -228,13 +228,13 @@ export class SimpleFile {
     /** Fetches this File. */
     public async fetch(): Promise<SimpleFile> {
         if (!this.partial) return Object.freeze(this);
-        const project = await curseforge.getProjectFileInfo(this.projectId, this.id, false) as File;
+        const project = await curseforge.getProjectFileInfo(this.projectId, this.id);
         this.url = project.downloadUrl;
         this.size = project.fileLength;
         this.date = project.fileDate;
         this.gameVersion = project.gameVersion;
         this.isAvailable = project.isAvailable;
-        this.isServerPack = project.isServerPack;
+        this.isServerPack = project.serverPackFileId !== null;
         this.serverPackFileId = project.serverPackFileId;
         this.dependencies = project.dependencies.map(d => new SimpleDependency(d));
         return Object.freeze(this);
