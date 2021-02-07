@@ -14,12 +14,12 @@ export class Util {
     static resolveCategory(category?: SectionAndCategoryResolvable): {section?: ValueOf<typeof SectionTypes>, category?: ValueOf<typeof CategoryList>} {
         if (!category) return {};
 
-        const isSection = Object.keys(SectionTypes).find(s => SectionTypes[s] === category || s === category);
+        const isSection = Object.keys(SectionTypes).find(s => Number(SectionTypes[s]) === Number(category) || s === category);
         if (isSection) return { section: SectionTypes[isSection] as ValueOf<typeof SectionTypes> };
 
         for (const [k, v] of Object.entries(CategoryList)) {
             if (k === category) return { category: v };
-            if (v === category) return { category: category };
+            if (Number(v) === Number(category)) return { category: v };
         }
 
         throw new TypeError('Unknown category');
