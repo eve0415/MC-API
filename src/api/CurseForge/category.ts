@@ -3,14 +3,14 @@ import { CategoryInfo, CategoryResolvable, SectionResolvable, Util } from '../..
 import { curseURL } from '../url';
 
 /**
- * Fetch section info.
+ * Fetch section's category list.
  * @param id - A section ID or name
  */
-export async function getSectionInfo(id: SectionResolvable): Promise<CategoryInfo> {
+export async function getSectionCategoryList(id: SectionResolvable): Promise<CategoryInfo[]> {
     const sectionID = Util.resolveCategory(id).section;
     const url = `${curseURL}/category/section/${sectionID}`;
-    const res = await axios.get<CategoryInfo>(url);
-    return new CategoryInfo(res.data);
+    const res = await axios.get<CategoryInfo[]>(url);
+    return res.data.map(d => new CategoryInfo(d));
 }
 
 /**
