@@ -21,7 +21,7 @@
         "noEmitHelpers": true,
         "noImplicitAny": false,
         "noUnusedLocals": true,
-        "outDir": "./lib",
+        "outDir": "lib",
         "pretty": true,
         "resolveJsonModule": true,
         "rootDir": "./src",
