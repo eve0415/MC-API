@@ -61,6 +61,7 @@
                 "SwitchCase": 1
             }
         ],
+        "@typescript-eslint/no-extra-parens": 2,
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-misused-promises": [
             "error",
@@ -170,7 +171,6 @@
         "no-console": "off",
         "no-duplicate-imports": "error",
         "no-empty-function": "error",
-        "no-extra-parens": 2,
         "no-extra-semi": "error",
         "no-floating-decimal": "error",
         "no-implied-eval": "error",

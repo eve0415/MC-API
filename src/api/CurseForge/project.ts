@@ -31,7 +31,7 @@ export async function searchProject(option?: Partial<SearchOptions>, simple = tr
         sectionId: Util.resolveCategory(option?.category).section,
         categoryId: Util.resolveCategory(option?.category).category,
         pageSize: option?.pageSize,
-        sort: SortTypes[option?.sort ?? ''] as number,
+        sort: SortTypes[option?.sort ?? 'POPULARITY'] as number,
         index: option?.index,
         gameVersion: option?.gameVersion ?? '',
     };

@@ -19,7 +19,7 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "noEmitHelpers": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "noUnusedLocals": true,
         "outDir": "lib",
         "pretty": true,
@@ -31,8 +31,11 @@
         "target": "ESNext",
         "types": [
             "node"
-        ]
+        ],
     },
+    "files": [
+        "src/Object.d.ts"
+    ],
     "include": [
         "src/**/*"
     ]

@@ -11,6 +11,10 @@ import { mojangStatus } from '../url';
  */
 export async function getMojangStatus(): Promise<MojangStatus> {
     const res = await axios.get<MojangStatus[]>(mojangStatus);
-    // eslint-disable-next-line
-    return res.data.reduce((result, obj) => (Object.keys(obj).forEach(k => result[k] = obj[k]), result));
+    return res.data.reduce((result, obj) => {
+        Object.keys(obj).forEach(k => {
+            result[k] = obj[k];
+        });
+        return result;
+    });
 }
