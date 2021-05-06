@@ -1,0 +1,14 @@
+name: Merge
+on:
+  pull_request:
+jobs:
+  merge:
+    name: Merge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Merge PR
+        uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          github-token: secrets.GITHUB_TOKEN
