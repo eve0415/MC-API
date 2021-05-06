@@ -1,10 +1,9 @@
 name: Test
-on: 
+on:
   push:
-    branches: '*'
-    tags-ignore: '*'
+    branches: ["*"]
+    tags-ignore: ["*"]
   pull_request:
-    branches: '*'
 jobs:
   lint:
     name: ESLint
@@ -17,7 +16,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 15
-          
+
       - name: Install yarn
         run: npm install -g yarn
 
